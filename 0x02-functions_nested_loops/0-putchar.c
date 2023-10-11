@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - This program prints the alphabet in lowercase
- * and uses the control loop for, and the function putchar
+ * main - This program prints out "_putchar" and then a new line
  * Return: Always 0 (Success)
  */
 int main(void)
