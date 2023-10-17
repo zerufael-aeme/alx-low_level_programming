@@ -13,7 +13,7 @@ j = 0;
 
 for (i = 0; s[i] != '\0'; i++)
 	;
-for (i--; j > i; i--)
+for (i--; j < i; i--)
 {
 ch = s[i];
 s[i] = s[j];
