@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  **_strncat - Concatenate two string
  *@dest: Destnation
@@ -10,20 +9,20 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int len, i;
+	int i, j, length;
 
-	/* get the length of dest string */
-	for (len = 0; dest[len] != 0; len++)
-		;
-
-	/* append src to dest one character at a time */
-	for (i = 0; i < n; i++)
+	length = 0;
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		dest[len] = src[i];
-		len++;
+		length++;
 	}
 
-	/* return concatenated string */
+	for (j = 0; j < n && src[j] != '\0'; j++)
+	{
+		dest[length] = src[j];
+		length++;
+	}
+	dest[length] = '\0';
+
 	return (dest);
 }
-
