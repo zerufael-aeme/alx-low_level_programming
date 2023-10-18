@@ -9,21 +9,22 @@
  * @n: The number of bytes to append
  * Return: The concatenated string
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
 	int len, i;
-	
-	/* gets the length of the dest string */
-	for (len = 0; dest[len] != '\0'; len++)
+
+	/* get the length of dest string */
+	for (len = 0; dest[len] != 0; len++)
 		;
 
-	/* concatnets src one char at a time */
+	/* append src to dest one character at a time */
 	for (i = 0; i < n; i++)
 	{
 		dest[len] = src[i];
 		len++;
 	}
-	/* return the concatenated string */
+
+	/* return concatenated string */
 	return (dest);
 }
-
