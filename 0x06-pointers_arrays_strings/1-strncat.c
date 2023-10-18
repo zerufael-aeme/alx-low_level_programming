@@ -13,13 +13,17 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int len, i;
 
+/* gets the length of the dest string*/
 	for (len = 0; dest[len] != '\0'; len++)
 		;
+
+	/*concatnets src one char at a time*/
 	for (i = 0; i < n; i++)
 	{
 		dest[len] = src[i];
 		len++;
 	}
+	/*returns the concatenated string*/
 	return (dest);
 }
 
