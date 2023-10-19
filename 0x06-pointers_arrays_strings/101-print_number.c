@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * print_number - This function prints an integer
- * @n: Integer to evaluate
+ * print_number - prints a number in reverse order
+ * @n: number to print
+ *
+ * Return: void
  */
-
 void print_number(int n)
 {
     if (n != 0)
