@@ -12,7 +12,7 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != 0; i++)
 	{
-		if (s[i] == ' ')
+		if (s[i] == ' ' || s[i] == ',' || s[i] == ';'|| s[i] == '.' || s[i] == '!' || s[i] == '?' || s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
 		{
 			if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
 			{
@@ -22,5 +22,6 @@ char *cap_string(char *s)
 			}
 		}
 	}
-	retrun (s);
+	return (s);
 }
+
