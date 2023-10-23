@@ -11,6 +11,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
+	char *fud;
 
 	for (i = 0; s[i] != 0; i++)
 	{
@@ -18,9 +19,11 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				return (s);
+				fud = &s[i];
+				return (fud);
 			}
 		}
 	}
+	return ('\0');
 }
 
