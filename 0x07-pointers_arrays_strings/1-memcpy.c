@@ -2,23 +2,27 @@
 
 /**
  * _memcpy - copy memory area
+ *
  * @dest: char array to copy into
+ *
  * @src: char array to copy from
+ *
  * @n: number of elements to copy
+ *
  * Return: pointer to dest
  */
-
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int i, tmp;
 	char *cpy;
-	tmp = n;
-	cpy = dest;
 
-	for (i = 0; i < tmp; i++)
+	cpy = dest;
+	while (n > 0)
 	{
-		dest[i] = src[i];
+		*dest = *src;
+		dest++;
+		src++;
+		n--;
 	}
+
 	return (cpy);
 }
-
