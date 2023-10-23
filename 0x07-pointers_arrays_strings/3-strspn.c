@@ -1,29 +1,39 @@
 #include "main.h"
 
 /**
- * _strchr - lochate character in a string
+ * _strspn - search a string for a set of bytes
  *
- * @s: char array string
+ * @s: char string array
  *
- * @c: char to look for
+ * @accept: char array to check bytes with
  *
- * Return: null if char not found, or pointer to first occurrence of char 'c'
+ * Return: number of bytes in the intial segment of 's'
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, count;
-	count = 0;
+	int i;
 
-	while (s* != '\0')
+	int j;
+
+	int n;
+
+	n = 0;
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*s == *accept)
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			count++;
-		} else
+			if (s[i] == accept[j])
+			{
+				n++;
+				break;
+			}
+			j++;
+		}
+		if (accept[j] == '\0')
+		{
 			break;
-		s++;
-		accept++;
+		}
 	}
+	return (n);
 }
-
