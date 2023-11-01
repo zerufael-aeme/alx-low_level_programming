@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int result;
+
 	result = 0;
 
 	if (argc != 3)
