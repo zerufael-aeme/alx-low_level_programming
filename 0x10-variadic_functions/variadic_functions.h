@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdio.h>
+#include <stdarg.h>
 
 /**
  * struct print - print type with corresponding print function
